@@ -4,7 +4,8 @@ class UserController {
   async login(req, res) {}
 
   async check(req, res) {
-    res.json("dsgfgfdgdfgdfg");
+    const query = req.query;
+    res.json(query);
   }
 }
 
