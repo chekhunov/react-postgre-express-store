@@ -7,6 +7,7 @@ const cors = require("cors");
 const fileUpload = require("express-fileupload");
 const router = require("./routes/index");
 const errorHandler = require("./middleware/ErrorHandlingMiddleware");
+const path = require("path");
 
 const PORT = process.env.PORT || 5100;
 
@@ -14,6 +15,8 @@ const app = express();
 app.use(cors());
 //чтоб могли парсить json
 app.use(express.json());
+//необходимо чтоб файлы из папки статик раздавались
+app.use(express.static(path.resolve(__dirname, "static")));
 app.use(fileUpload({}));
 app.use("/api", router);
 
