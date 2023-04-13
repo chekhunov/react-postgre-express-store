@@ -3,8 +3,8 @@ import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import TypeBar from "../components/TypeBar";
-// import BrandBar from "../components/BrandBar";
-// import DeviceList from "../components/DeviceList";
+import BrandBar from "../components/BrandBar";
+import DeviceList from "../components/DeviceList";
 import { observer } from "mobx-react-lite";
 // import { Context } from "..";
 // import { fetchBrands, fetchDevices, fetchTypes } from "../http/deviceAPI";
@@ -41,9 +41,9 @@ const Shop = observer(() => {
           <TypeBar />
         </Col>
         <Col md={9}>
-          {/* <BrandBar /> */}
-          {/* <DeviceList />
-          <Pages /> */}
+          <BrandBar />
+          <DeviceList />
+          {/* <Pages /> */}
         </Col>
       </Row>
     </Container>
